@@ -21,3 +21,4 @@ select ROWNUM as r  from DUAL connect by level <=100
 --method 3
 select listagg(r,',') within group ( order by r desc )
 from (select ROWNUM*3 as r from DUAL  connect by level <= 100/3);
+   
