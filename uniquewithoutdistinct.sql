@@ -32,7 +32,7 @@ select  null, null from DUAL;
 
 select  idno, name from studentList
 intersect
-select  idno, name from studentList;
+select  idno, name from studentList;   
 
 select idno,name from (
  select  idno, name , row_number() over (partition by idno,name order by  idno,name desc ) rnk
